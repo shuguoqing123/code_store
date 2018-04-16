@@ -2,7 +2,8 @@
 #-*-coding:utf-8-*-
 
 from bs4 import BeautifulSoup
-
+from urllib import request
+import re
 
 html_doc = """
 <html><head><title>The Dormouse's story</title></head>
@@ -47,14 +48,19 @@ def test2():
     print(soup.p)#获取第一个p标签
     print(soup.p['class'])#第一个p标签的class属性的值
     print(soup.a)#第一个a标签
-    print(soup.find_all('a'))
+    print(soup.find_all('a'))#所有a标签
+    print(soup.find('p',{'class':'story'}).get_text())#获取所有class为‘story’的p标签
+    print(soup.find_all('a',href=re.compile(r'^http://example.com/')))#正则表达式匹配a标签中href以匹配的字符串开头的内容
 
 
-#post请求，携带请求信息，模拟登陆豆瓣
+#访问豆瓣的日记页面
 def test3():
+    req = request.urlopen("https://www.douban.com/note/665344082/").read().decode('utf-8')
+    soup = BeautifulSoup(req,'html.parser')
+    print(soup.title.string)
+    print(soup.find_all('a'))
     pass
 
 #test1()
-test2()
-
-#test3()
+#test2()
+test3()
