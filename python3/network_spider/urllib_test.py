@@ -23,8 +23,8 @@ def test3():
     with open('result.txt','w') as f:
         postdata = parse.urlencode([
                 ('source','index_nav'),
-                ('form_email','18305144860'),
-                ('form_password','lixuhao1001'),
+                ('form_email','183xxxx4860'),
+                ('form_password','lixxxxx1001'),
                 ])
 
         req =  request.Request("https://www.douban.com/")
