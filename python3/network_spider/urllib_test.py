@@ -27,7 +27,7 @@ def test3():
                 ('form_password','lixxxxx1001'),
                 ])
 
-        req =  request.Request("https://www.douban.com/")
+        req =  request.Request("https://www.douban.com/login")
         req.add_header("User-Agent","Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:56.0) Gecko/20100101 Firefox/56.0")
         req.add_header("Host","www.douban.com")
         req.add_header("Content-Type","application/x-www-form-urlencoded")
