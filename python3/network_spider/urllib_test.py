@@ -40,7 +40,6 @@ def test3():
 #关于代理的使用。免费代理服务器，可以在这些网站中查找：
 #http://www.xicidaili.com/
 #http://www.youdaili.net/Daili/http/36812.html
-
 #数据库维护一个ip池
 #https://blog.csdn.net/lw_power/article/details/77946852#t0
 def test4():
