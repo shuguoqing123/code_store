@@ -77,7 +77,23 @@ def test3():
 
 
 
+#列表去重的方法--reduce实现
+#关于reduce:
+#https://docs.python.org/2/library/functions.html#reduce
+#http://www.cnblogs.com/XXCXY/p/5180245.html
+#关于lambda:
+#http://www.cnblogs.com/nyist-xsk/p/7404675.html
+from functools import reduce
+def test4():
+    a = [1,2,2,3,4,4,1,2,4,5,7,7,9,0,0,9,8,6,3,4]
+    func = lambda x,y:x if y in x else x+[y]
+    a = reduce(func, [[], ]+a)
+    print(a)
+
+
+
 #test1()    
 #test2()
-test3()
+#test3()
+test4()
 
