@@ -1,3 +1,7 @@
+'''
+新浪家居装修论坛爬虫
+2018/05/09
+'''
 from urllib import request
 from urllib import parse
 import urllib
